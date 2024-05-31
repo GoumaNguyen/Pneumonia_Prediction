@@ -1,0 +1,135 @@
+/* core/static/assets/css/main.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Đặt các phần tử theo chiều dọc */
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.background {
+    background-image: url("../images/hospital_cartoon.png");
+    filter: blur(0.3px);
+}
+
+header {
+    width: 100%;
+    background-color: rgb(199, 215, 255); /* Màu nền xanh dương */
+    color: rgb(244, 244, 244); /* Màu chữ xanh */
+    padding: 2px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+header h1 {
+    margin: 5px 0;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #333;
+    width: 90%;
+    height: 580px;
+    max-width: 200vh;
+    margin: 10px; /* Margin ở cả hai phía */
+    display: flex;
+}
+
+.left-side,
+.right-side {
+    flex: 1; /* Chia diện tích bằng nhau giữa left và right */
+    height: 100%; /* Chiều cao của left và right là 100% chiều cao của body */
+    overflow: auto; /* Kích hoạt thanh cuộn nếu nội dung quá dài */
+    box-sizing: border-box; /* Đảm bảo rằng padding và border không làm thay đổi kích thước của phần tử */
+    padding: 10px; /* Padding cho từng phần */
+    display: flex;
+    flex-direction: column;
+}
+
+.left-side h3,
+.right-side h3 {
+    text-align: center;
+}
+
+input[type="file"] {
+    margin: 20px 0;
+}
+
+.upload-section {
+    /* Thiết lập các kiểu dựa trên nhu cầu của bạn */
+    padding: 10px 20px;
+
+}
+
+.image-display , .returned-images{
+    flex-grow: 1; /* Chiếm phần còn lại của left-side */
+    background-color: #f2f2f2; /* Màu nền xám */
+    border: 8px solid #fff; /* Viền màu trắng */
+    border-radius: 10px; /* Bo 4 góc */
+    overflow: hidden; /* Ảnh sẽ bị cắt bớt nếu vượt quá kích thước của phần tử */
+    display: flex; /* Sử dụng flexbox để căn giữa ảnh */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.image-display img {
+    max-width: 100%; /* Ảnh sẽ không vượt quá kích thước của phần tử */
+    max-height: 100%; /* Ảnh sẽ không vượt quá kích thước của phần tử */
+}
+
+#image-upload {
+    margin: 10px 0;
+}
+.button-section {
+    /* Thiết lập các kiểu dựa trên nhu cầu của bạn */
+    padding: 5px 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.right-side {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.result-section {
+    margin-bottom: 20px;
+}
+
+.result-section {
+    background-color: rgba(255, 255, 255, 0.5); /* Nền trong suốt */
+    border-radius: 10px; /* Bo góc */
+    padding: 10px;
+    text-align: center;
+}
+
+.result-section img, .returned-images img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Canh giữa ảnh */
+}

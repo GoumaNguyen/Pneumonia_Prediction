@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+</head>
+<body class="background">
+    <header class="header">
+        <h1>Xử lý ảnh - Nhóm 3 - Phát hiện bệnh viêm phổi</h1>
+    </header>
+
+    <div class="content">
+        <div class="left-side">
+            
+            <div class="upload-section">
+                <!-- Phần upload hình ảnh -->
+                <input type="file" id="image-upload" accept="image/*">
+            </div>
+            <div class="image-display" id="image-display">
+                <!-- Phần hiển thị hình ảnh -->
+            </div>
+            <div class="button-section">
+                <!-- Phần button -->
+                <button id="process-image">Process Image</button>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="result-section">
+                <!-- Hiển thị ảnh dựa trên giá trị của labels_link -->
+                <img id="result-image" src="{% static 'assets/images/wait.png' %}" alt="Result Image">
+            </div>
+            <div class="returned-images">
+                <!-- Hiển thị ảnh trả về từ js -->
+                <img id="returned-image" src="{% static 'assets/images/no_result.png' %}" alt="Returned Image">
+            </div>
+        </div>
+    </div>
+    
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+<script src="{% static '/assets/js/main.js' %}"></script> <!-- This is how to include a static file -->
